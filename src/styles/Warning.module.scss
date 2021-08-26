@@ -1,0 +1,32 @@
+@keyframes message-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.warning {
+  position: absolute;
+  div {
+    position: relative;
+    font-weight: 700;
+    animation: message-in 1s;
+    padding: 5px 20px;
+    border-radius: 5px;
+    top: 20px;
+  }
+}
+
+.red {
+  background-color: #e53935;
+  border: 2px solid #b71c1c;
+  color: #fff;
+}
+
+.yellow {
+  background-color: #ffb74d;
+  border: 2px solid #f57c00;
+  color: #e65100;
+}
