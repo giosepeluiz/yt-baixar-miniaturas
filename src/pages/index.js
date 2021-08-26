@@ -82,7 +82,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       <Head>
         <title>Baixar Miniaturas do Youtube - Giosepe Luiz</title>
         <meta name="description" content="Baixar Miniaturas do Youtube" />
@@ -93,40 +93,38 @@ export default function Home() {
         <meta property="og:image" content="../images/og-social-banner.png" />
         <link rel="icon" href="/icons/favicon.ico" />
       </Head>
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <input
-            className={styles["input-text"]}
-            type="text"
-            ref={inputRef}
-            placeholder="Digite a URL do vídeo no Youtube"
-          />
-          <input
-            className={styles["input-button"]}
-            type="button"
-            onClick={() => ytThumbnail(inputRef.current.value)}
-            value="Pegar Miniaturas"
-          />
-        </main>
+      <main className={styles.main}>
+        <input
+          className={styles["input-text"]}
+          type="text"
+          ref={inputRef}
+          placeholder="Digite a URL do vídeo no Youtube"
+        />
+        <input
+          className={styles["input-button"]}
+          type="button"
+          onClick={() => ytThumbnail(inputRef.current.value)}
+          value="Pegar Miniaturas"
+        />
+      </main>
 
-        {thumbnails.validate !== 1 && <Warning validate={thumbnails.validate} />}
+      {thumbnails.validate !== 1 && <Warning validate={thumbnails.validate} />}
 
-        {thumbnails.validate === 1 && <Thumbnail video={thumbnails} />}
+      {thumbnails.validate === 1 && <Thumbnail video={thumbnails} />}
 
-        <footer className={styles.footer}>
-          Criado por{" "}
-          <a href="https://www.facebook.com/giosepeluiz" target="_blank" rel="noreferrer">
-            Giosepe Luiz
-          </a>{" "}
-          |{" "}
-          <a
-            href="https://github.com/giosepeluiz/yt-baixar-miniaturas"
-            target="_blank"
-            rel="noreferrer">
-            GitHub
-          </a>
-        </footer>
-      </div>
-    </>
+      <footer className={styles.footer}>
+        Criado por{" "}
+        <a href="https://www.facebook.com/giosepeluiz" target="_blank" rel="noreferrer">
+          Giosepe Luiz
+        </a>{" "}
+        |{" "}
+        <a
+          href="https://github.com/giosepeluiz/yt-baixar-miniaturas"
+          target="_blank"
+          rel="noreferrer">
+          GitHub
+        </a>
+      </footer>
+    </div>
   );
 }
