@@ -11,14 +11,15 @@ const message = (value) => {
   }
 };
 
-export const Warning = (props) => {
+const Warning = (props) => {
+  const { validate } = props;
   return (
-    props.validate !== 0 && (
+    validate !== 0 && (
       <section className={styles.warning}>
-        <div className={(props.validate === -1 ? styles.red : styles.yellow)}>
-          {message(props.validate)}
-        </div>
+        <div className={validate === -1 ? styles.red : styles.yellow}>{message(validate)}</div>
       </section>
     )
   );
 };
+
+export default Warning;

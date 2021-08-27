@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useRef, useState } from "react";
 import styles from "../styles/Home.module.scss";
 import Thumbnail from "../components/Thumbnail";
-import { Warning } from "../components/Warning";
+import Warning from "../components/Warning";
 
 // const urlString = new URL("https://youtube.com/watch?v=ssvFnucdhfM");
 // const videoId = urlString.searchParams.get("v");
