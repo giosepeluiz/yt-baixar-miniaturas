@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import styles from "../styles/Home.module.scss";
 import Thumbnail from "../components/Thumbnail";
 import Warning from "../components/Warning";
@@ -35,6 +35,21 @@ export default function Home() {
   const [thumbnails, setThumbnails] = useState({
     validate: 0,
   });
+
+  useEffect(() => {
+    const dataFetch = async () => {
+      try {
+        const response = await fetch(
+          "https://www.googleapis.com/youtube/v3/videos?part=id%2C+snippet&id=d41IrRqr7o8&key=AIzaSyCDU8LwAeIQljSmTv2TA0Ll4HBezVpx8Io",
+        );
+        const json = await response.json();
+        console.log(json);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
+    dataFetch();
+  }, []);
 
   const ytThumbnail = (value) => {
     if (isValidUrl(value) === true) {
