@@ -90,7 +90,7 @@ export default function Home() {
         <meta property="og:description" content="Baixar Miniaturas do Youtube" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://thumb.arqueirover.de" />
-        <meta property="og:image" content="../images/og-social-banner.png" />
+        <meta property="og:image" content="/images/og-social-banner.png" />
         <link rel="icon" href="/icons/favicon.ico" />
       </Head>
       <main className={styles.main}>
