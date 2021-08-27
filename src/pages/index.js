@@ -36,20 +36,20 @@ export default function Home() {
     validate: 0,
   });
 
-  useEffect(() => {
-    const dataFetch = async () => {
-      try {
-        const response = await fetch(
-          "https://www.googleapis.com/youtube/v3/videos?part=id%2C+snippet&id=d41IrRqr7o8&key=AIzaSyCDU8LwAeIQljSmTv2TA0Ll4HBezVpx8Io",
-        );
-        const json = await response.json();
-        console.log(json);
-      } catch (error) {
-        console.log("error", error);
-      }
-    };
-    dataFetch();
-  }, []);
+  // useEffect(() => {
+  //   const dataFetch = async () => {
+  //     try {
+  //       const response = await fetch(
+  //         "https://www.googleapis.com/youtube/v3/videos?part=id%2C+snippet&id=d41IrRqr7o8&key=AIzaSyCDU8LwAeIQljSmTv2TA0Ll4HBezVpx8Io",
+  //       );
+  //       const json = await response.json();
+  //       console.log(json);
+  //     } catch (error) {
+  //       console.log("error", error);
+  //     }
+  //   };
+  //   dataFetch();
+  // }, []);
 
   const ytThumbnail = (value) => {
     if (isValidUrl(value) === true) {
