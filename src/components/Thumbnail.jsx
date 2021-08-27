@@ -6,7 +6,7 @@ const Thumbnail = (props) => {
   return (
     <section className={styles.secondary}>
       <div className={styles.image}>
-        <Image src={video.sizes.small} alt="Thumbnail" />
+        <Image src={video.sizes.small} width="320" height="180" alt="Thumbnail" />
       </div>
       <div className={styles.links}>
         <ul>

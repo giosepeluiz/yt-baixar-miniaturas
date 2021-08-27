@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
-  env: {
-    EXAMPLE: process.env.EXAMPLE,
+  images: {
+    domains: ["img.youtube.com"],
   },
 };
